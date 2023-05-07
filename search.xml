@@ -7,7 +7,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;font size=1&gt;字体大小size=1&lt;/font&gt;</span><br><span class="line">&lt;font size=3&gt;字体大小size=3&lt;/font&gt;</span><br><span class="line">&lt;font size=5&gt;字体大小size=5&lt;/font&gt;</span><br></pre></td></tr></table></figure>
 
 <p><font size=1>字体大小size&#x3D;1</font><br><font size=3>字体大小size&#x3D;3</font><br><font size=5>字体大小size&#x3D;5</font></p>
-<h2 id="主页轮播手动置顶文章"><a href="#主页轮播手动置顶文章" class="headerlink" title="主页轮播手动置顶文章"></a>主页轮播手动置顶文章</h2><p><img src="https://raw.githubusercontent.com/ZachAceGuo/picgo/main/img/image-20230507154649221.png" alt="image-20230507154649221"></p>
+<h2 id="主页轮播手动置顶文章"><a href="#主页轮播手动置顶文章" class="headerlink" title="主页轮播手动置顶文章"></a>主页轮播手动置顶文章</h2><p><img src="https://cdn.staticaly.com/gh/ZachAceGuo/picgo@main/img/image-20230507180846785.png" alt="image-20230507180846785"></p>
 <ol>
 <li><p><font size=4>安装插件,在博客根目录<code>[Blogroot]</code>下打开终端，运行以下指令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-butterfly-swiper --save</span><br></pre></td></tr></table></figure>
