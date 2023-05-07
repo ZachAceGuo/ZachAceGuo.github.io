@@ -1,6 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>博客美化日记</title>
+    <url>/2023/05/07/Beautify-diary/</url>
+    <content><![CDATA[<h1 id="记录博客美化日记"><a href="#记录博客美化日记" class="headerlink" title="记录博客美化日记"></a>记录博客美化日记</h1><h2 id="Markdown字体大小设置"><a href="#Markdown字体大小设置" class="headerlink" title="Markdown字体大小设置"></a>Markdown字体大小设置</h2><p><font size=4>size：规定文本的尺寸大小，取值范围为1~7 ，浏览器默认值是 3。注意，size&#x3D;50也是可以显示的，但与7的字体大小一样size4&#x3D;</font></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;font size=1&gt;字体大小size=1&lt;/font&gt;</span><br><span class="line">&lt;font size=3&gt;字体大小size=3&lt;/font&gt;</span><br><span class="line">&lt;font size=5&gt;字体大小size=5&lt;/font&gt;</span><br></pre></td></tr></table></figure>
+
+<p><font size=1>字体大小size&#x3D;1</font><br><font size=3>字体大小size&#x3D;3</font><br><font size=5>字体大小size&#x3D;5</font></p>
+<h2 id="主页轮播手动置顶文章"><a href="#主页轮播手动置顶文章" class="headerlink" title="主页轮播手动置顶文章"></a>主页轮播手动置顶文章</h2><p><img src="https://raw.githubusercontent.com/ZachAceGuo/picgo/main/img/image-20230507154649221.png" alt="image-20230507154649221"></p>
+<ol>
+<li><p><font size=4>安装插件,在博客根目录<code>[Blogroot]</code>下打开终端，运行以下指令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-butterfly-swiper --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加配置信息，以下为写法示例<br>在站点配置文件<code>_config.yml</code>或者主题配置文件<code>_config.butterfly.yml</code>中添加</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># hexo-butterfly-swiper</span></span><br><span class="line"><span class="comment"># see https://akilar.top/posts/8e1264d1/</span></span><br><span class="line"><span class="attr">swiper:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment"># 开关</span></span><br><span class="line">  <span class="attr">priority:</span> <span class="number">5</span> <span class="comment">#过滤器优先权</span></span><br><span class="line">  <span class="attr">enable_page:</span> <span class="string">all</span> <span class="comment"># 应用页面</span></span><br><span class="line">  <span class="attr">timemode:</span> <span class="string">date</span> <span class="comment">#date/updated</span></span><br><span class="line">  <span class="attr">layout:</span> <span class="comment"># 挂载容器类型</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">id</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">recent-posts</span></span><br><span class="line">    <span class="attr">index:</span> <span class="number">0</span></span><br><span class="line">  <span class="attr">default_descr:</span> <span class="string">再怎么看我也不知道怎么描述它的啦！</span></span><br><span class="line">  <span class="attr">swiper_css:</span> <span class="string">https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css</span> <span class="comment">#swiper css依赖</span></span><br><span class="line">  <span class="attr">swiper_js:</span> <span class="string">https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js</span> <span class="comment">#swiper js依赖</span></span><br><span class="line">  <span class="attr">custom_css:</span> <span class="string">https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css</span> <span class="comment"># 适配主题样式补丁</span></span><br><span class="line">  <span class="attr">custom_js:</span> <span class="string">https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js</span> <span class="comment"># swiper初始化方法</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参数释义</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">备选值&#x2F;类型</th>
+<th align="left">释义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">priority</td>
+<td align="left">number</td>
+<td align="left">【可选】过滤器优先级，数值越小，执行越早，默认为10，选填</td>
+</tr>
+<tr>
+<td align="left">enable</td>
+<td align="left">true&#x2F;false</td>
+<td align="left">【必选】控制开关</td>
+</tr>
+<tr>
+<td align="left">enable_page</td>
+<td align="left">path&#x2F;all</td>
+<td align="left">【可选】填写想要应用的页面的相对路径（即路由地址）,如根目录就填’&#x2F;‘,分类页面就填’&#x2F;categories&#x2F;‘。若要应用于所有页面，就填’all’，默认为all</td>
+</tr>
+<tr>
+<td align="left">timemode</td>
+<td align="left">date&#x2F;updated</td>
+<td align="left">【可选】时间显示，date为显示创建日期，updated为显示更新日期,默认为date</td>
+</tr>
+<tr>
+<td align="left">layout.type</td>
+<td align="left">id&#x2F;class</td>
+<td align="left">【可选】挂载容器类型，填写id或class，不填则默认为id</td>
+</tr>
+<tr>
+<td align="left">layout.name</td>
+<td align="left">text</td>
+<td align="left">【必选】挂载容器名称</td>
+</tr>
+<tr>
+<td align="left">layout.index</td>
+<td align="left">0和正整数</td>
+<td align="left">【可选】前提是layout.type为class，因为同一页面可能有多个class，此项用来确认究竟排在第几个顺位</td>
+</tr>
+<tr>
+<td align="left">default_descr</td>
+<td align="left">text</td>
+<td align="left">默认文章描述</td>
+</tr>
+<tr>
+<td align="left">swiper_css</td>
+<td align="left">url</td>
+<td align="left">【可选】自定义的swiper依赖项css链接</td>
+</tr>
+<tr>
+<td align="left">swiper_js</td>
+<td align="left">url</td>
+<td align="left">【可选】自定义的swiper依赖项加js链接</td>
+</tr>
+<tr>
+<td align="left">custom_css</td>
+<td align="left">url</td>
+<td align="left">【可选】适配主题样式补丁</td>
+</tr>
+<tr>
+<td align="left">custom_js</td>
+<td align="left">url</td>
+<td align="left">【可选】swiper初始化方法</td>
+</tr>
+</tbody></table>
+<p>使用方法<br>在文章的<code>front_matter</code>中添加<code>swiper_index</code>配置项即可。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章标题</span><br><span class="line">date: 创建日期</span><br><span class="line">updated: 更新日期</span><br><span class="line">cover: 文章封面</span><br><span class="line">description: 文章描述</span><br><span class="line"><span class="section">swiper<span class="emphasis">_index: 1 #置顶轮播图顺序，非负整数，数字越大越靠前</span></span></span><br><span class="line"><span class="emphasis"><span class="section">---</span></span></span><br></pre></td></tr></table></figure>
+
+<p>转载自<a href="https://akilar.top/">Akilar</a> size&#x3D;4</font></p>
+]]></content>
+      <tags>
+        <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2023/05/03/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
